@@ -11,7 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#13131A"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -26,6 +28,11 @@
     },
     "experiments": {
       "tsconfigPaths": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9e438ce2-8d94-4d29-a0b1-103f6cc45728"
+      }
     }
   }
 }
