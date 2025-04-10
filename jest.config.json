@@ -1,5 +1,6 @@
 {
   "preset": "jest-expo",
+  "testPathIgnorePatterns": ["<rootDir>/__tests__/mocks/"],
   "jest": {
     "preset": "jest-expo",
     "transformIgnorePatterns": [
