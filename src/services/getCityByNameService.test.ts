@@ -1,17 +1,15 @@
-import { mockWeatherAPIResponse } from "@__tests__/mocks/mockCityAPIResponse";
 import { api } from "./api";
 
-import { getWeatherByCityService } from "./getWeatherByCityService";
+import { mockCityAPIResponse } from "@__tests__/mocks/api/mockCityAPIResponse";
+
+import { getCityByNameService } from "./getCityByNameService";
 
 describe("Service: getCityByNameService", () => {
-  it("should return the city details", async () => {
-    jest.spyOn(api, "get").mockResolvedValue({ data: mockWeatherAPIResponse });
+  it("should return city details", async () => {
+    jest.spyOn(api, "get").mockResolvedValue({ data: mockCityAPIResponse });
 
-    const response = await getWeatherByCityService({
-      latitude: 123,
-      longitude: 456,
-    });
+    const response = await getCityByNameService("São Paulo");
 
-    expect(response).toHaveProperty("today");
+    expect(response.length).toBeGreaterThan(0);
   });
 });
