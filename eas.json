@@ -5,22 +5,28 @@
   },
   "build": {
     "preview": {
+      "autoIncrement": true,
       "android": {
-        "distribution": "internal"
+        "distribution": "internal",
+        "autoIncrement": "versionCode"
       },
       "ios": {
         "simulator": true
-      },
-      "env": {
-        "EXPO_PUBLIC_WEATHER_APP_ID": ""
       }
     },
     "production": {
+      "autoIncrement": true,
       "android": {
-        "distribution": "internal"
-      },
-      "env": {
-        "EXPO_PUBLIC_WEATHER_APP_ID": ""
+        "autoIncrement": "versionCode"
+      }
+    }
+  },
+  "submit": {
+    "preview": {
+      "android": {
+        "track": "internal",
+        "serviceAccountKeyPath": "./google-services.json",
+        "releaseStatus": "draft"
       }
     }
   }
