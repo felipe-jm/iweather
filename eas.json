@@ -4,18 +4,21 @@
     "appVersionSource": "remote"
   },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
-    },
     "preview": {
-      "distribution": "internal"
+      "android": {
+        "distribution": "internal"
+      },
+      "env": {
+        "EXPO_PUBLIC_WEATHER_APP_ID": ""
+      }
     },
     "production": {
-      "autoIncrement": true
+      "android": {
+        "distribution": "internal"
+      },
+      "env": {
+        "EXPO_PUBLIC_WEATHER_APP_ID": ""
+      }
     }
-  },
-  "submit": {
-    "production": {}
   }
 }
